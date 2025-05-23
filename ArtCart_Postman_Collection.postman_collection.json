@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "934a39dc-af22-45d2-9789-d02bd95b9e30",
+		"name": "ArtCart_Postman_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40329146"
+	},
+	"item": [
+		{
+			"name": "Product Apis",
+			"item": [
+				{
+					"name": "Product List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "http://127.0.0.1:8000"
+							},
+							{
+								"key": "Referer",
+								"value": "http://127.0.0.1:8000/frontend/products"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6ImZsa2NSbis3OUkvTnIxZnljWlhvakE9PSIsInZhbHVlIjoiYysreHM0UVJ0Q0F3cHpoT0NVZ1hWUlhWMjhrVjdyZVN4clRmQnJRSjdUbHNaTnZPUktHcmdvWXFrSk9raU1LNjNFWWJQNE1kdkFuS3MxbjBMN1ZPVk1yQ0NJVFZYUWpOOERXV0RuQnZ1K0NCK1BTaEZmUTZQSVBXbXNhNmNOelYiLCJtYWMiOiJkYzg4ZjdhMDU3NTFmZDQwNmYyZGI2ZjE1ZjI2NGU3NWQ3Zjg0Y2NhZThkYjQwOTNkZDYwODc0MTU1YTUxMDExIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkdwWjZSczNqVWo2K2haWVNKYUZ0WEE9PSIsInZhbHVlIjoiYlF5SmhKWTI3bTlhbUoydVR1RFJoREVVTG9CclpJZXRtbGhxWGh1akhBRFcyR3Y4Vjc5emRvWnozd3VPOGEzdVd5UjBad1FZdUdNTlJVS1VubXcwNkdBYUxpVFExR0dWTWE5U3RBbzhyeHBtQTh6aHk0MkMrcU1WZnZGYVd0emoiLCJtYWMiOiJkZjdkNTc3OTY3ZjgzMjhmNzM3NjYxZWUxYjk1ZTI5NGY3M2Q5Y2NiYzcyZThmNjY3YWY1NjE5OTI1YzU2NDNhIiwidGFnIjoiIn0%3D"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"product_id\":3,\"quantity\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cart/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Referer",
+								"value": "http://127.0.0.1:8000/frontend/cart"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6ImtyNFVHdTJseU8yUlFUYytQWlhSd0E9PSIsInZhbHVlIjoid013NFRWWDVGTGgybkhLNTNieGFZRVM5bzUyRHBQR09nbUZsenRUaWFBSUp3WE9qaXloRFJRekl1WHNOckZidzMwN1h4WnFrZmM3WU9zemxKZUFYcUM3Sm9IalR6VWpHelFoMVNLalJ0N2Z2L2N2Rnk3RUo5bVNTK1ErS3RMcUwiLCJtYWMiOiIyZjY2ZWZjYTI0YjUwYzIyMmRlZGIyMzVmZWZjNTVjZmY0ODFiMDdiNzkxZGY3OGI4OTdhZmE3MzgwY2YwOWQ4IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkhRNWtzeFBuYmYvRVd4SWcybk1DT3c9PSIsInZhbHVlIjoiQXpqdFg2ZEd3NUR6cDczV01vTkxqUisxUm0yUWVLSklFQStMNFFORTNyYWhKWUZVWnZUcUgxcGJlY1U0TnNPaXlTYUYyTjkxMElQeUY2MEJKeVlKdGZUQnVYdG5PT05IcnJIenRlMWE5SThQK3F5cWRQY0xDYXR1bUw5akU0OVEiLCJtYWMiOiJlZDk4ZTBmNWEyODFhNDZkMjFhNGIyODRlNTljMTZlYTRhN2QzZDc3ZTU4ZWViNDI2YjliZjM3MWUxODA4MzE0IiwidGFnIjoiIn0%3D"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update quantity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "http://127.0.0.1:8000"
+							},
+							{
+								"key": "Referer",
+								"value": "http://127.0.0.1:8000/frontend/cart"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6ImtyNFVHdTJseU8yUlFUYytQWlhSd0E9PSIsInZhbHVlIjoid013NFRWWDVGTGgybkhLNTNieGFZRVM5bzUyRHBQR09nbUZsenRUaWFBSUp3WE9qaXloRFJRekl1WHNOckZidzMwN1h4WnFrZmM3WU9zemxKZUFYcUM3Sm9IalR6VWpHelFoMVNLalJ0N2Z2L2N2Rnk3RUo5bVNTK1ErS3RMcUwiLCJtYWMiOiIyZjY2ZWZjYTI0YjUwYzIyMmRlZGIyMzVmZWZjNTVjZmY0ODFiMDdiNzkxZGY3OGI4OTdhZmE3MzgwY2YwOWQ4IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkhRNWtzeFBuYmYvRVd4SWcybk1DT3c9PSIsInZhbHVlIjoiQXpqdFg2ZEd3NUR6cDczV01vTkxqUisxUm0yUWVLSklFQStMNFFORTNyYWhKWUZVWnZUcUgxcGJlY1U0TnNPaXlTYUYyTjkxMElQeUY2MEJKeVlKdGZUQnVYdG5PT05IcnJIenRlMWE5SThQK3F5cWRQY0xDYXR1bUw5akU0OVEiLCJtYWMiOiJlZDk4ZTBmNWEyODFhNDZkMjFhNGIyODRlNTljMTZlYTRhN2QzZDc3ZTU4ZWViNDI2YjliZjM3MWUxODA4MzE0IiwidGFnIjoiIn0%3D"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"quantity\":3}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cart/item/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cart",
+								"item",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://127.0.0.1:8000"
+							},
+							{
+								"key": "Referer",
+								"value": "http://127.0.0.1:8000/frontend/cart"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6ImtyNFVHdTJseU8yUlFUYytQWlhSd0E9PSIsInZhbHVlIjoid013NFRWWDVGTGgybkhLNTNieGFZRVM5bzUyRHBQR09nbUZsenRUaWFBSUp3WE9qaXloRFJRekl1WHNOckZidzMwN1h4WnFrZmM3WU9zemxKZUFYcUM3Sm9IalR6VWpHelFoMVNLalJ0N2Z2L2N2Rnk3RUo5bVNTK1ErS3RMcUwiLCJtYWMiOiIyZjY2ZWZjYTI0YjUwYzIyMmRlZGIyMzVmZWZjNTVjZmY0ODFiMDdiNzkxZGY3OGI4OTdhZmE3MzgwY2YwOWQ4IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkhRNWtzeFBuYmYvRVd4SWcybk1DT3c9PSIsInZhbHVlIjoiQXpqdFg2ZEd3NUR6cDczV01vTkxqUisxUm0yUWVLSklFQStMNFFORTNyYWhKWUZVWnZUcUgxcGJlY1U0TnNPaXlTYUYyTjkxMElQeUY2MEJKeVlKdGZUQnVYdG5PT05IcnJIenRlMWE5SThQK3F5cWRQY0xDYXR1bUw5akU0OVEiLCJtYWMiOiJlZDk4ZTBmNWEyODFhNDZkMjFhNGIyODRlNTljMTZlYTRhN2QzZDc3ZTU4ZWViNDI2YjliZjM3MWUxODA4MzE0IiwidGFnIjoiIn0%3D"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cart/item/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cart",
+								"item",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checkout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Referer",
+								"value": "http://127.0.0.1:8000/frontend/cart"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6Ik1pQVA4S0NJS0Iva1hkcnpjN3Fhc0E9PSIsInZhbHVlIjoibDBpdlk3azJjTnRxQmwwaXJKU0hVcDBrSGlWR09BU3EwakJ1V29DcDB5NnJ4SS95dWM5ckY4S3hjVkR3M3ZiTnFuZjc4TTNOTE9NNG1jTDVGUDB0SG5JajBjY29ya0lXd2NBbWtwRngrbTVOb1Q5aHVlV3FRQ2xkNzdWYld6ZXkiLCJtYWMiOiIwMTA1ZTgwYjQ0MGZkYTlkZGU3OTBiYTJmOTZlOGY1MjVhNDE0YjZmOGEyZTQ2NDM4MDM3YjJkYzUyODQwNmQyIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6InVGVU9kQm9CSnpDWldVa2N5bER0ZVE9PSIsInZhbHVlIjoiZ3BWclpVMlZUNU4vRVE1bCs0SWVJbHkyL2pjc0syalNzdlMvVERFVERxaXJJNkRUalUrZG8wREI5KzFTOGVmTU1OQllUMmF2ZitnQVh4ZnBGTGltUXhQUk1XbGxDUWdHK3pLMDhTKzVpbGpSMG1KMStjcURkdTUwTDMvRDhJTnEiLCJtYWMiOiI3NDUyNGNhZDg2YzQzMzdmOWVjZWZiMjM2ZDE1ZDM0YzQ5MmVmNjM0ZmQzNGJhMjdjZWM5ZDk4ZDMwMDE3ZmZjIiwidGFnIjoiIn0%3D"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cart/create-order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cart",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
