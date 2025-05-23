@@ -136,3 +136,7 @@ POST    	/api/cart/payment	       Process and store payment data
 ** Frontend Redirect **
 Method	Endpoint	Description
 POST	/frontend/products	Redirects to /frontend/products
+
+Postman Collection : ArtCart_Postman_Collection.postman_collection.json
+
+sql backup : databases/artcart_db_backup.sql
