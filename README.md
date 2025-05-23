@@ -1,61 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ArtCart - Home Decor E-Commerce Backend
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**ArtCart** is a Laravel-based e-commerce backend system where users can browse and order home decor products with multiple images. It features a CMS admin panel for product and cart management, along with a RESTful API for frontend integration.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Project Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### PHASE 1 – Product Management & API Integration
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Relational MySQL database schema.
+- Backend built with **Laravel** (PHP > 8).
+- Products include: `name`, `price`, and **multiple images**.
+- Full **CRUD** functionality for products.
+- Admin panel to:
+  - Add, edit, delete products.
+  - Upload and manage multiple images per product.
+- **GET API** to fetch all products with images.
 
-## Learning Laravel
+### PHASE 2 – Cart Functionality & API
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **POST API** to add products to the cart (Hardcoded `user_id = 1`).
+- Admin panel view to list cart items.
+- **GET API** for viewing cart list by admin.
+- Cart items show:
+  - Product details
+  - Cart total
+  - Quantity
+- API for:
+  - Add to cart
+  - Update cart items
+  - Delete cart items
+  - Checkout with **payment gateway integration** (e.g., Stripe or Razorpay)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tech Stack
 
-## Laravel Sponsors
+- **Backend**: Laravel 12+
+- **Database**: MySQL 8+
+- **Admin UI**: Integrated with a clean and modern admin template (Bootstrap based)
+- **Authentication**: Admin login using Laravel auth 
+- **File Uploads**: Laravel Filesystem
+- **Payment Gateway**: Razorpay
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Project Structure
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── Api/
+│   │   |   ├──CartApiController.php
+│   │   |   ├── ProductApiController.php
+│   │   ├── Auth/
+│   │   |   ├──LoginController.php
+│   │   ├── ProductController.php
+│   │   ├── OrderController.php
+├── Models/
+│   ├── Product.php
+│   ├── ProductImage.php
+│   ├── Cart.php
+│   ├── CartItem.php
+│   ├── Order.php
+│   ├── OrderItem.php
+resources/
+├── views/
+│   │   ├── auth/
+│   │   |   ├──login.blade.php
+│   │   ├── frontendLogin/
+│   │   |   ├──cart.blade.php
+│   │   |   ├──login.blade.php
+│   │   |   ├──products.blade.php
+│   │   ├── layouts/
+│   │   |   ├──sidebar.blade.php
+│   │   |   ├──navbar.blade.php
+│   │   |   ├──products.blade.php
+│   │   ├── orders/
+│   │   |   ├──index.blade.php
+│   │   |   ├──show.blade.php
+│   │   ├── products/
+│   │   |   ├──create.blade.php
+│   │   |   ├──edit.blade.php
+│   │   |   ├──index.blade.php
+│   │   |   ├──show.blade.php
+│   │   |   ├──upload_images.blade.php
+│   ├── dashboard.blade.php/
 
-## Contributing
+routes/
+├── api.php
+├── web.php
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+git clone https://github.com/divyadixit15/artcart.git
+cd artcart_project
 
-## Code of Conduct
+## Install dependencies
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+ -- **composer install**
+Create .env and configure
 
-## Security Vulnerabilities
+cp .env.example .env
+php artisan key:generate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Set database credentials in .env
 
-## License
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=artcart_project
+DB_USERNAME=root
+DB_PASSWORD=
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##  API Documentation
+ Products API
+Method	     Endpoint	               Description
+GET	        /api/products       	List all products with images
+POST    	/api/products	        Create a new product
+GET	        /api/products/{id}	    Get a single product detail
+PUT      	/api/products/{id}     	Update a product
+DELETE  	/api/products/{id}	    Delete a product
+
+ Cart API
+Method	     Endpoint	               Description
+POST     	/api/cart/add	      Add product to cart (user_id = 1)
+PUT     	/api/cart/item/{id}	  Update quantity or info of a cart item
+DELETE   	/api/cart/item/{id}	  Remove an item from the cart
+GET	        /api/cart	          View all cart items
+
+ Order & Payment API
+Method	        Endpoint	              Description
+GET	        /api/cart/create-order	   Generate order before payment
+POST    	/api/cart/payment	       Process and store payment data
+
+** Frontend Redirect **
+Method	Endpoint	Description
+POST	/frontend/products	Redirects to /frontend/products

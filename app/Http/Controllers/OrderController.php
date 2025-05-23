@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    // Show all orders of the logged-in user
-
     public function storeAfterPayment(Request $request)
     {
         $user = Auth::user();
